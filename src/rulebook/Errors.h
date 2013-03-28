@@ -10,5 +10,9 @@
 
 class Error{};
 class ErrorInvalidData : Error {};
+class ErrorNameTooLong : Error {};
+class ErrorNullPointer : Error {};
+class ErrorUnexpectedValue : Error {};
+class ErrorArrayOutOfBounds : Error{};
 
 #endif /* ERRORS_H_ */
