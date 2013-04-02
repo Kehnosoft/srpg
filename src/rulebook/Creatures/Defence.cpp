@@ -6,8 +6,6 @@
  */
 
 #include "../Errors.h"
-#include "../TypeDefs.h"
-#include "Abilities.h"
 #include "Defence.h"
 
 Defence::Defence(const Abilities* abilityPointer) : abilities(abilityPointer)
@@ -16,12 +14,12 @@ Defence::Defence(const Abilities* abilityPointer) : abilities(abilityPointer)
   {
     for(int i = armor; i < bonus_type_max; i++)
     {
-      armorBonuses[i] = 0;
+      defenceBonuses[i] = 0;
     }
 
     for(int i = piercing_damage; i < damage_resistance_array_max; i++)
     {
-      damageResistance[i] = 0;
+      damageResistances[i] = 0;
     }
   }
   else
@@ -36,15 +34,15 @@ Defence::~Defence(void)
   return;
 }
 
-void Defence::addBonus(bonus_type type, int bonus)
+void Defence::addBonus(defence_bonus_type type, int bonus)
 {
-  armorBonuses[type] += bonus;
+  defenceBonuses[type] += bonus;
   return;
 }
 
-void Defence::decreaseBonus(bonus_type type, int bonus)
+void Defence::decreaseBonus(defence_bonus_type type, int bonus)
 {
-  armorBonuses[type] -= bonus;
+  defenceBonuses[type] -= bonus;
   return;
 }
 
@@ -57,11 +55,11 @@ int Defence::getAC(AC_type type, const piercing_type* piercing) const
     switch(piercing[i])
     {
       case no_piercing:
-        tempBonuses[i] = armorBonuses[i];
+        tempBonuses[i] = defenceBonuses[i];
         break;
 
       case half_piercing:
-        tempBonuses[i] = armorBonuses[i]/2;
+        tempBonuses[i] = defenceBonuses[i]/2;
         break;
 
       case full_piercing:
@@ -78,17 +76,17 @@ int Defence::getAC(AC_type type, const piercing_type* piercing) const
   {
     case normal:
       total += tempBonuses[armor] + tempBonuses[shield] + tempBonuses[attunement_protection]
-               + armorBonuses[natural] + armorBonuses[deflection] +
+               + defenceBonuses[natural] + defenceBonuses[deflection] +
                + abilities->getModifier(dexterity);
       break;
 
     case touch:
-      total += armorBonuses[deflection] + abilities->getModifier(dexterity);
+      total += defenceBonuses[deflection] + abilities->getModifier(dexterity);
       break;
 
     case flatFooted:
       total += tempBonuses[armor] + tempBonuses[shield] + tempBonuses[attunement_protection]
-               + armorBonuses[natural];
+               + defenceBonuses[natural];
       break;
 
     default:
@@ -101,18 +99,18 @@ int Defence::getAC(AC_type type, const piercing_type* piercing) const
 int Defence::getDamageResistance(damage_type type) const
 {
   int resistance;
-  resistance = damageResistance[type];
+  resistance = damageResistances[type];
   return resistance;
 }
 
 void Defence::addDamageResistance(damage_type type, int resistance)
 {
-  damageResistance[type] += resistance;
+  damageResistances[type] += resistance;
   return;
 }
 
 void Defence::decreaseDamageResistance(damage_type type, int resistance)
 {
-  damageResistance[type] -= resistance;
+  damageResistances[type] -= resistance;
   return;
 }

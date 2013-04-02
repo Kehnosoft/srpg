@@ -8,27 +8,41 @@
 #ifndef ITEM_H_
 #define ITEM_H_
 
-enum item_t
+#include <string>
+
+enum item_type
 {
-  junk = 0
+  junk_item = 0,
+  weapon_item,
+  armor_item
+};
+
+static const unsigned int max_item_name = 20;
+static const unsigned int max_item_description = 100;
+
+struct item_data_struct
+{
+    int itemWeight;
+    const std::string* itemName;
+    const std::string* itemDescription;
 };
 
 class Item
 {
   public:
-    Item(int itemWeight, std::string itemName);
+    Item(item_data_struct& itemInfo);//int itemWeight, const std::string* itemName, const std::string* itemDescription);
     ~Item(void);
     int getWeight(void);
-    item_t getType(void);
+    item_type getType(void);
 
   protected:
-    void setType(item_t itemType);
+    void setType(item_type itemType);
 
   private:
     int weight;
-    item_t type;
+    item_type type;
     std::string name;
-    // TODO: Later add a description class that contains the item name and a short desccription.
+    std::string description;
 };
 
 

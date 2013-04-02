@@ -8,6 +8,9 @@
 #ifndef INVENTORY_H_
 #define INVENTORY_H_
 
+#include "../Creatures/Abilities.h"
+#include "Item.h"
+
 class Inventory
 {
   public:

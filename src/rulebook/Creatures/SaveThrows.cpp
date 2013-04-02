@@ -6,8 +6,6 @@
  */
 
 #include "../Errors.h"
-#include "../Core/Dice.h"
-#include "Abilities.h"
 #include "SaveThrows.h"
 
 SaveThrows::SaveThrows(const Abilities* abilityPointer) : saveDie(1, 20), abilities(abilityPointer)

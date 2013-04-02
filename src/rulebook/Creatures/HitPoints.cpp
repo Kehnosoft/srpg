@@ -6,10 +6,6 @@
  */
 
 #include "../Errors.h"
-#include "../TypeDefs.h"
-#include "../Core/Dice.h"
-#include "Defence.h"
-#include "Attack.h"
 #include "HitPoints.h"
 
 HitPoints::HitPoints(int value, const Defence* defencePointer) : hitDie(1, value), defence(defencePointer)
@@ -106,6 +102,10 @@ int HitPoints::takeDamage(const damage_struct& damage)
     if(damageTaken > 0)
     {
       current -= damageTaken;
+      if((damage.type & nonlethal_bit) && (current <= 0))
+      {
+        current = 1;
+      }
     }
     else
     {

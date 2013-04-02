@@ -9,6 +9,7 @@
 #define SAVETHROWS_H_
 
 #include "../Core/Dice.h"
+#include "Abilities.h"
 
 class SaveThrows
 {

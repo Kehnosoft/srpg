@@ -6,23 +6,40 @@
  */
 
 #include "../Errors.h"
-#include "../TypeDefs.h"
-#include "Abilities.h"
-#include "Attack.h"
-#include "Defence.h"
-#include "SaveThrows.h"
-#include "HitPoints.h"
-#include "../Items/Inventory.h"
 #include "Creature.h"
 
 Creature::Creature(const init_stats initStats) :
-health(initStats.hitPoints, &defence),
-inventory(&abilities),
-saves(&abilities),
-defence(&abilities),
+abilities(initStats.abilityScores),
 attack(&abilities),
-abilities(initStats.abilityScores)
+defence(&abilities),
+saves(&abilities),
+inventory(&abilities),
+health(initStats.hitPoints, &defence),
+skills(&abilities)
 {
-
+  experienceReward = 0;
   return;
+}
+
+Creature::~Creature(void)
+{
+  return;
+}
+
+void Creature::setExperienceReward(int reward)
+{
+  if(reward > 0)
+  {
+    experienceReward = reward;
+  }
+  else
+  {
+    throw ErrorInvalidData();
+  }
+  return;
+}
+
+int Creature::getExperienceReward(void) const
+{
+  return experienceReward;
 }

@@ -6,9 +6,6 @@
  */
 
 #include "../Errors.h"
-#include "../TypeDefs.h"
-#include "../Core/Dice.h"
-#include "Abilities.h"
 #include "Attack.h"
 
 Attack::Attack(const Abilities* abilityPointer) : abilities(abilityPointer)

@@ -6,7 +6,6 @@
  */
 
 #include "../Errors.h"
-#include "../Creatures/Abilities.h"
 #include "Inventory.h"
 
 Inventory::Inventory(const Abilities* abilityPointer) : abilities(abilityPointer)

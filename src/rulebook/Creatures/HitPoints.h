@@ -9,6 +9,8 @@
 #define HITPOINTS_H_
 
 #include "../Core/Dice.h"
+#include "Defence.h"
+#include "Attack.h"
 
 class HitPoints
 {
