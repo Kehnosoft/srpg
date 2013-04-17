@@ -2,6 +2,7 @@
 
 #include "Game.h"
 #include "Event.h"
+#include "Character.h"
 #include "Entity.h"
 #include "renderer/Fps.h"
 
@@ -52,8 +53,15 @@ bool Game::init(){
         return false;
     }
 
-    player1.x = 400;
+    if(player2.load("resources/2.bmp", 200, 200) == false) {
+        return false;
+    }
+
+    player1.x = 200;
     player1.y = 300;
+
+    player2.x = 1040;
+    player2.y = 300;
 
     return true;
 }
@@ -80,6 +88,8 @@ void Game::draw(){
 
     //draw the rest of the stuff & flip the buffer
     player1.draw(display);
+    player2.draw(display);
+
     SDL_Flip(display);
 }
 

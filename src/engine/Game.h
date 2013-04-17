@@ -1,6 +1,7 @@
 #ifndef GAME_H
     #define GAME_H
 
+#include "Character.h"
 #include "Entity.h"
 #include "Event.h"
 
@@ -22,11 +23,11 @@ class Game : public Event {
     private:
         bool running;
         SDL_Surface* display;
-        Entity player1;
+        Character player1;
+        Character player2;
 
         int windowWidth;
         int windowHeight;
-        int currentPlayer;
 
 };
 

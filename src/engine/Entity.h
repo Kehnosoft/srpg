@@ -1,6 +1,6 @@
 #ifndef ENTITY_H
     #define ENTITY_H
-
+#include <SDL/SDL.h>
 #include <vector>
 
 typedef enum {
