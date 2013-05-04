@@ -63,7 +63,21 @@ bool Game::init(){
     player2.x = 1040;
     player2.y = 300;
 
+    Entity::entityList.push_back(&player1);
+    Entity::entityList.push_back(&player2);
+
+    currentPlayer = Entity::entityList.begin();
+
     return true;
+}
+
+void Game::endTurn(){
+    if(currentPlayer != Entity::entityList.end()-1){
+        ++currentPlayer;
+    }
+    else{
+        currentPlayer = Entity::entityList.begin();
+    }
 }
 
 void Game::onEvent(SDL_Event* event){
@@ -86,9 +100,10 @@ void Game::draw(){
     //draw that to clear the screen every loop
     SDL_FillRect(display, &screen, 0);
 
-    //draw the rest of the stuff & flip the buffer
-    player1.draw(display);
-    player2.draw(display);
+    //draw entities & flip the buffer
+    for(int i = 0; i < Entity::entityList.size(); i++) {
+        Entity::entityList[i]->draw(display);
+    }
 
     SDL_Flip(display);
 }
@@ -106,21 +121,21 @@ void Game::shutdown(){
 void Game::OnKeyDown(SDLKey key, SDLMod mod, Uint16 unicode){
     switch(key) {
         case SDLK_LEFT: {
-            player1.move(MOVE_LEFT);
+            (*currentPlayer)->move(MOVE_LEFT);
             break;
         }
         case SDLK_RIGHT: {
-            player1.move(MOVE_RIGHT);
+             (*currentPlayer)->move(MOVE_RIGHT);
             break;
          }
         
         case SDLK_UP: {
-            player1.move(MOVE_UP);
+            (*currentPlayer)->move(MOVE_UP);
             break;
         }
 
         case SDLK_DOWN: {
-            player1.move(MOVE_DOWN);
+            (*currentPlayer)->move(MOVE_DOWN);
             break;
         }
 
@@ -134,25 +149,29 @@ void Game::OnKeyUp(SDLKey key, SDLMod mod, Uint16 unicode){
 
         case SDLK_LEFT: {
             //let the player move again
-            player1.canMove = true;
+            (*currentPlayer)->canMove = true;
+            endTurn();
             break;
         }
 
         case SDLK_RIGHT: {
             //..again..
-            player1.canMove = true;
+            (*currentPlayer)->canMove = true;
+            endTurn();
             break;
          }
         
         case SDLK_UP: {
             //..and again..
-            player1.canMove = true;
+            (*currentPlayer)->canMove = true;
+            endTurn();
             break;
         }
 
         case SDLK_DOWN: {
             //until the end of the directions
-            player1.canMove = true;
+            (*currentPlayer)->canMove = true;
+            endTurn();
             break;
         }
         default: {

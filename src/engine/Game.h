@@ -11,6 +11,7 @@ class Game : public Event {
         Game();
         int run();
         bool init();
+        void endTurn();
         void onEvent(SDL_Event* event);
         void draw();
         void loop();
@@ -22,6 +23,7 @@ class Game : public Event {
 
     private:
         bool running;
+        std::vector<Entity*>::iterator currentPlayer;
         SDL_Surface* display;
         Character player1;
         Character player2;
