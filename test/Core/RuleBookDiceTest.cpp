@@ -7,8 +7,8 @@
 
 #include <iostream>
 
-#include "../../Errors.h"
-#include "../../Core/Dice.h"
+#include "../../src/rulebook/Errors.h"
+#include "../../src/rulebook/Core/Dice.h"
 #include "RuleBookDiceTest.h"
 
 using namespace std;
@@ -67,14 +67,6 @@ TEST(Dice, ExceptionOnInvalidParameters)
   CHECK_THROWS(ErrorInvalidData, invalidDie = new Dice(1, -1));
   CHECK_THROWS(ErrorInvalidData, invalidDie = new Dice(101, 100));
   CHECK_THROWS(ErrorInvalidData, invalidDie = new Dice(100, 101));
-
-  try
-  {
-    invalidDie = new Dice(100, 100);
-  }
-  catch(Error thrownError)
-  {
-    FAIL("An exception was thrown with valid max dice 100d100!");
-  }
+  CHECK_NO_THROWS(invalidDie = new Dice(100, 100));
   delete invalidDie;
 }

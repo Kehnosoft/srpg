@@ -5,8 +5,8 @@
  *      Author: Juho L
  */
 
-#include "../../Errors.h"
-#include "../../Creatures/Abilities.h"
+#include "../../src/rulebook/Errors.h"
+#include "../../src/rulebook/Creatures/Abilities.h"
 #include "RuleBookAbilitiesTest.h"
 
 TEST_GROUP(Abilities)

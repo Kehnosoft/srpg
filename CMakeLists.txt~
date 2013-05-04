@@ -24,9 +24,11 @@ src/rulebook/Items/Shield.cpp src/rulebook/Items/Shield.h
 src/rulebook/Items/Weapon.cpp src/rulebook/Items/Weapon.h)
 
 set(RuleBookTests
-test/RuleBookTests.cpp test/RuleBookTests.h
-test/Core/RuleBookDiceTest.cpp test/Core/RuleBookDiceTest.h
-test/Creatures/RuleBookAbilitiesTest.cpp test/Creatures/RuleBookAbilitiesTest.h)
+test/RuleBookTests.h
+test/Core/RuleBookDiceTest.cpp Tests/Core/RuleBookDiceTest.h
+test/Creatures/RuleBookAbilitiesTest.cpp Tests/Creatures/RuleBookAbilitiesTest.h)
+
+set(RuleBookMain main.cpp)
 
 set(CppUTest
 /home/juhol/git/cpputest/include/CppUTest/MemoryLeakDetectorNewMacros.h
@@ -37,7 +39,7 @@ find_library(CPPUTEST_LIBRARY NAMES CppUTest
             
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-add_executable(rulebook ${RuleBookCore} ${RuleBookCreature} ${RuleBookItems} ${CppUTest} ${RuleBookTests})
+add_executable(rulebook ${RuleBookCore} ${RuleBookCreature} ${RuleBookItems} ${CppUTest} ${RuleBookTests} ${RuleBookMain})
 target_link_libraries(rulebook ${CPPUTEST_LIBRARY})
 
 install(TARGETS rulebook RUNTIME DESTINATION bin)
