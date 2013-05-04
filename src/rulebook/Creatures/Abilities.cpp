@@ -69,7 +69,7 @@ unsigned int Abilities::getScore(ability_type type) const
 
 int Abilities::getModifier(ability_type type) const
 {
-  int tempMod = (abilities[type].score - 10) % 3;
+  int tempMod = (abilities[type].score - 10) / 3;
   return tempMod;
 }
 
@@ -85,7 +85,7 @@ unsigned int Abilities::getTotalScore(ability_type type) const
 
 int Abilities::getTotalModifier(ability_type type) const
 {
-  int totalMod = ((abilities[type].score - 10) % 3) + abilities[type].tempModifier;
+  int totalMod = ((abilities[type].score + abilities[type].tempAdjustment - 10) / 3) + abilities[type].tempModifier;
   return totalMod;
 }
 

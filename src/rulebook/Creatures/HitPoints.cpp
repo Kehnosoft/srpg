@@ -118,3 +118,21 @@ int HitPoints::takeDamage(const damage_struct& damage)
   }
   return damageTaken;
 }
+
+void HitPoints::rollHitPoints(int dice)
+{
+  if(dice > 0)
+  {
+    int rolledHitPoints = 0;
+    for(int i = 0; i < dice; i++)
+    {
+      rolledHitPoints += hitDie.roll();
+    }
+    setMaxHitPoints(rolledHitPoints);
+  }
+  else
+  {
+    throw ErrorInvalidData();
+  }
+  return;
+}

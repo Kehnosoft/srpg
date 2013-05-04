@@ -26,7 +26,7 @@ class HitPoints
     int healAll(void);
     int takeDamage(const damage_struct& damage);
 
-    // TODO: Option to roll HPs.
+    void rollHitPoints(int dice);
 
   private:
     const Dice hitDie;
