@@ -1,5 +1,5 @@
 ﻿CC = g++
-BUILD = bin/srpg
+BUILD = bin/srpg.exe
 CFLAGS = -c -g 
 IDIR = src 
 LIBS = -lSDLmain -lSDL -lSDL_image 
@@ -28,8 +28,8 @@ Attack.o: src/rulebook/Creatures/Attack.cpp src/rulebook/Creatures/Attack.h
 BaseSkills.o: src/rulebook/Creatures/BaseSkills.cpp src/rulebook/Creatures/BaseSkills.h
 	$(CC) $(CFLAGS) src/rulebook/Creatures/BaseSkills.cpp
 
-Character.o: src/rulebook/Creatures/RuleCharacter.cpp src/rulebook/Creatures/RuleCharacter.h
-	$(CC) $(CFLAGS) src/rulebook/Creatures/RuleCharacter.cpp
+Character.o: src/rulebook/Creatures/Character.cpp src/rulebook/Creatures/Character.h
+	$(CC) $(CFLAGS) src/rulebook/Creatures/Character.cpp
 
 Creature.o: src/rulebook/Creatures/Creature.cpp src/rulebook/Creatures/Creature.h
 	$(CC) $(CFLAGS) src/rulebook/Creatures/Creature.cpp
@@ -71,4 +71,4 @@ main.o: src/main.cpp
 	$(CC) $(CFLAGS) src/main.cpp
 
 clean:
-	rm *.o
+	del *.o

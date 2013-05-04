@@ -8,7 +8,7 @@
 #ifndef CHARACTER_H_
 #define CHARACTER_H_
 
-#include "Creature.h"
+#include "RuleCreature.h"
 
 enum character_profession
 {
@@ -20,11 +20,11 @@ enum character_race
   eagle = 0
 };
 
-typedef struct
+struct character_type
 {
   character_profession profession;
   character_race race;
-} character_type;
+};
 
 class Character : public Creature
 {

@@ -10,7 +10,7 @@
 
 #include "Item.h"
 #include "../Creatures/Defence.h"
-#include "../Creatures/RuleCharacter.h"
+#include "../Creatures/Character.h"
 
 enum armor_type
 {

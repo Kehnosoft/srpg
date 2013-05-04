@@ -6,7 +6,7 @@
  */
 
 #include "../Errors.h"
-#include "Character.h"
+#include "RuleCharacter.h"
 
 static const int levelGap = 15;
 static const int levelingArray[levelGap] = {0,      2000,   5000,   9000,   15000,

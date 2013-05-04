@@ -6,7 +6,7 @@
  */
 
 #include "../Errors.h"
-#include "Creature.h"
+#include "RuleCreature.h"
 
 Creature::Creature(const init_stats initStats) :
 abilities(initStats.abilityScores),

@@ -10,14 +10,12 @@
 #include "../Errors.h"
 #include "Dice.h"
 
-static const int maxDice = 100;
-static const int maxDiceValue = 100;
 bool isSeeded = false;
 
 Dice::Dice(int numberOfDice, int diceValue)
 {
   if((numberOfDice > 0) && (diceValue > 0) &&
-     (numberOfDice <= maxDice) && (diceValue <= maxDiceValue))
+     (numberOfDice <= 100) && (diceValue <= 100))
   {
     dice = numberOfDice;
     value = diceValue;

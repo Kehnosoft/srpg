@@ -1,0 +1,15 @@
+/*
+ * RuleBookTests.h
+ *
+ *  Created on: Apr 28, 2013
+ *      Author: juhol
+ */
+
+#ifndef RULEBOOKTESTS_H_
+#define RULEBOOKTESTS_H_
+
+#include "/home/juhol/git/cpputest/include/CppUTest/TestHarness.h"
+#include "/home/juhol/git/cpputest/include/CppUTest/CommandLineTestRunner.h"
+#include "Core/RuleBookDiceTest.h"
+
+#endif

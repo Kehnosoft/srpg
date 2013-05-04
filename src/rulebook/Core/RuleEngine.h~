@@ -10,8 +10,8 @@
 
 #include "../TypeDefs.h"
 #include <string>
-#include "../Creatures/RuleCreature.h"
-#include "../Creatures/RuleCharacter.h"
+#include "../Creatures/Creature.h"
+#include "../Creatures/Character.h"
 #include "../Items/Item.h"
 
 enum attack_result
