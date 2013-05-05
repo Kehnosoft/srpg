@@ -1,15 +1,29 @@
-/*
- * SaveThrows.h
- *
- *  Created on: 20.3.2013
- *      Author: Juho L
- */
+//-------------------------------------------------------------------------------------------------
+// Project:     SRPG
+// Created:     2013-03-20
+// Author:      Juho Lepisto
+//
+// Filename:    SaveThrows.h
+// Description: This is a save throws class that rolls save throws according to stats and other
+//              bonuses.
+// Notes:       -
+//-------------------------------------------------------------------------------------------------
 
 #ifndef SAVETHROWS_H_
 #define SAVETHROWS_H_
 
+// 1. External header files
+
 #include "../Core/Dice.h"
 #include "Abilities.h"
+
+// 2. Global enums, constants and macross
+
+
+// 3. Global data structs
+
+
+// 4. Class definition
 
 class SaveThrows
 {

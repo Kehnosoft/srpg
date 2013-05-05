@@ -1,12 +1,26 @@
-/*
- * Abilities.cpp
- *
- *  Created on: 20.3.2013
- *      Author: Juho L
- */
+//-------------------------------------------------------------------------------------------------
+// Project:     SRPG
+// Created:     2013-03-20
+// Author:      Juho Lepisto
+//
+// Filename:    Abilities.cpp
+// Description: This is a ability score class that provides the basic ability scores and score
+//              modifiers.
+// Notes:       -
+//-------------------------------------------------------------------------------------------------
 
-#include "../Errors.h"
+// 1. Internal header files
+
+#include "../../Errors.h"
 #include "Abilities.h"
+
+// 2. Local enums, constants and macross
+
+
+// 3. Local global data structs and variables
+
+
+// 4. Constructor and destructor
 
 Abilities::Abilities(void)
 {
@@ -48,6 +62,8 @@ Abilities::~Abilities(void)
 {
   return;
 }
+
+// 5. Public functions
 
 void Abilities::setScore(ability_type type, int score)
 {
@@ -124,5 +140,10 @@ void Abilities::resetTempModifier(ability_type type)
   abilities[type].tempModifier = 0;
   return;
 }
+
+// 6. Protected functions
+
+
+// 7. Private functions
 
 

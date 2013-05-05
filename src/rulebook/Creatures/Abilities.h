@@ -1,12 +1,21 @@
-/*
- * Abilities.h
- *
- *  Created on: 20.3.2013
- *      Author: Juho L
- */
+//-------------------------------------------------------------------------------------------------
+// Project:     SRPG
+// Created:     2013-03-20
+// Author:      Juho Lepisto
+//
+// Filename:    Abilities.h
+// Description: This is a ability score class that provides the basic ability scores and score
+//              modifiers.
+// Notes:       -
+//-------------------------------------------------------------------------------------------------
 
 #ifndef ABILITIES_H_
 #define ABILITIES_H_
+
+// 1. External header files
+
+
+// 2. Global enums, constants and macross
 
 enum ability_type
 {
@@ -19,6 +28,11 @@ enum ability_type
 };
 
 static const int ability_array_size = 6;
+
+// 3. Global data structs
+
+
+// 4. Class definition
 
 class Abilities
 {

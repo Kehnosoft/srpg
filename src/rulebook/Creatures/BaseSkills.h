@@ -1,15 +1,23 @@
-/*
- * BaseSkills.h
- *
- *  Created on: Mar 29, 2013
- *      Author: juhol
- */
+//-------------------------------------------------------------------------------------------------
+// Project:     SRPG
+// Created:     2013-03-29
+// Author:      Juho Lepisto
+//
+// Filename:    BaseSkills.h
+// Description: This is a base skills class that is common to all creatures, players and
+//              enemies alike.
+// Notes:       -
+//-------------------------------------------------------------------------------------------------
 
 #ifndef BASESKILLS_H_
 #define BASESKILLS_H_
 
-#include "../TypeDefs.h"
+// 1. External header files
+
+#include "../../TypeDefs.h"
 #include "Abilities.h"
+
+// 2. Global enums, constants and macross
 
 enum skill_type
 {
@@ -27,6 +35,15 @@ static const bf meditation_bit = 1UL << meditation;
 static const int skill_array_size = meditation + 1;
 static const bf max_skill_bit = meditation_bit;
 
+static const ability_type skillAbilityMods[skill_array_size] = {
+  strength,   // climbing
+  attunement, // perception
+  dexterity,  // stealth
+  attunement  // meditation
+};
+
+// 3. Global data structs
+
 struct skill_struct
 {
   int points;
@@ -34,12 +51,7 @@ struct skill_struct
   int tempMod;
 };
 
-static const ability_type skillAbilityMods[skill_array_size] = {
-  strength,   // climbing
-  attunement, // perception
-  dexterity,  // stealth
-  attunement  // meditation
-};
+// 4. Class definition
 
 class BaseSkills
 {

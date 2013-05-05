@@ -1,12 +1,26 @@
-/*
- * BaseSkills.cpp
- *
- *  Created on: Mar 29, 2013
- *      Author: juhol
- */
+//-------------------------------------------------------------------------------------------------
+// Project:     SRPG
+// Created:     2013-03-29
+// Author:      Juho Lepisto
+//
+// Filename:    BaseSkills.cpp
+// Description: This is a base skills class that is common to all creatures, players and
+//              enemies alike.
+// Notes:       -
+//-------------------------------------------------------------------------------------------------
 
-#include "../Errors.h"
+// 1. Internal header files
+
+#include "../../Errors.h"
 #include "BaseSkills.h"
+
+// 2. Local enums, constants and macross
+
+
+// 3. Local global data structs and variables
+
+
+// 4. Constructor and destructor
 
 BaseSkills::BaseSkills(const Abilities* abilityPointer) : abilities(abilityPointer)
 {
@@ -31,6 +45,8 @@ BaseSkills::~BaseSkills(void)
 {
   return;
 }
+
+// 5. Public functions
 
 void BaseSkills::increaseSkill(skill_type type, int value)
 {
@@ -123,3 +139,9 @@ void BaseSkills::removeTrainedSkill(bf skills)
   }
   return;
 }
+
+// 6. Protected functions
+
+
+// 7. Private functions
+

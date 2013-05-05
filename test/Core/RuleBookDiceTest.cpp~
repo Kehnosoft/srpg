@@ -7,8 +7,8 @@
 
 #include <iostream>
 
-#include "../../Errors.h"
-#include "../../Core/Dice.h"
+#include "../../src/rulebook/Errors.h"
+#include "../../src/rulebook/Core/Dice.h"
 #include "RuleBookDiceTest.h"
 
 using namespace std;

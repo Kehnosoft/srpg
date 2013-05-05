@@ -1,18 +1,30 @@
-/*
- * Dice.cpp
- *
- *  Created on: 20.3.2013
- *      Author: Juho L
- */
+//-------------------------------------------------------------------------------------------------
+// Project:     SRPG
+// Created:     2013-03-20
+// Author:      Juho Lepisto
+//
+// Filename:    Dice.cpp
+// Description: This is a dice class, which generates random numbers according to given dice. Max dice is 100d100.
+// Notes:       -
+//-------------------------------------------------------------------------------------------------
+
+// 1. Internal header files
 
 #include <cstdlib>
 #include <ctime>
-#include "../Errors.h"
+#include "../../Errors.h"
 #include "Dice.h"
+
+// 2. Local enums, constants and macross
 
 static const int maxDice = 100;
 static const int maxDiceValue = 100;
+
+// 3. Local global data structs and variables
+
 bool isSeeded = false;
+
+// 4. Constructor and destructor
 
 Dice::Dice(int numberOfDice, int diceValue)
 {
@@ -40,6 +52,8 @@ Dice::~Dice(void)
   return;
 }
 
+// 5. Public functions
+
 int Dice::roll(void) const
 {
   int sum = 0;
@@ -53,5 +67,10 @@ int Dice::roll(void) const
   }
   return sum;
 }
+
+// 6. Protected functions
+
+
+// 7. Private functions
 
 

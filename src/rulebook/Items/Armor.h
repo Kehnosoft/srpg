@@ -1,16 +1,23 @@
-/*
- * Armor.h
- *
- *  Created on: Mar 29, 2013
- *      Author: juhol
- */
+//-------------------------------------------------------------------------------------------------
+// Project:     SRPG
+// Created:     2013-03-29
+// Author:      Juho Lepisto
+//
+// Filename:    Armor.h
+// Description: This is a class for armor type items.
+// Notes:       -
+//-------------------------------------------------------------------------------------------------
 
 #ifndef ARMOR_H_
 #define ARMOR_H_
 
+// 1. External header files
+
 #include "Item.h"
 #include "../Creatures/Defence.h"
 #include "../Creatures/RuleCharacter.h"
+
+// 2. Global enums, constants and macross
 
 enum armor_type
 {
@@ -19,6 +26,8 @@ enum armor_type
   heavy
 };
 
+// 3. Global data structs
+
 struct armor_data_struct
 {
     armor_type type;
@@ -26,6 +35,8 @@ struct armor_data_struct
     int damageResistances[damage_resistance_array_max];
     character_race raceType;
 };
+
+// 4. Class definition
 
 class Armor : public Item
 {

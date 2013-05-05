@@ -1,12 +1,25 @@
-/*
- * Item.cpp
- *
- *  Created on: Mar 23, 2013
- *      Author: juhol
- */
+//-------------------------------------------------------------------------------------------------
+// Project:     SRPG
+// Created:     2013-03-23
+// Author:      Juho Lepisto
+//
+// Filename:    Item.cpp
+// Description: This is a base class for all items.
+// Notes:       -
+//-------------------------------------------------------------------------------------------------
 
-#include "../Errors.h"
+// 1. Internal header files
+
+#include "../../Errors.h"
 #include "Item.h"
+
+// 2. Local enums, constants and macross
+
+
+// 3. Local global data structs and variables
+
+
+// 4. Constructor and destructor
 
 Item::Item(item_data_struct& itemInfo)
 {
@@ -31,6 +44,8 @@ Item::~Item(void)
   return;
 }
 
+// 5. Public functions
+
 int Item::getWeight(void)
 {
   return weight;
@@ -46,3 +61,9 @@ void Item::setType(item_type itemType)
   type = itemType;
   return;
 }
+
+// 6. Protected functions
+
+
+// 7. Private functions
+

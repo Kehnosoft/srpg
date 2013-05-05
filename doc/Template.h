@@ -3,18 +3,16 @@
 // Created:     2013-03-23
 // Author:      Juho Lepisto
 //
-// Filename:    Inventory.h
-// Description: This is a class for creature inventory.
+// Filename:    RuleEngine.h
+// Description: This is a base interface class between the rules and the game mechanic.
 // Notes:       -
 //-------------------------------------------------------------------------------------------------
 
-#ifndef INVENTORY_H_
-#define INVENTORY_H_
+#ifndef TEMPLATE_H_
+#define TEMPLATE_H_
 
 // 1. External header files
 
-#include "../Creatures/Abilities.h"
-#include "Item.h"
 
 // 2. Global enums, constants and macross
 
@@ -24,15 +22,11 @@
 
 // 4. Class definition
 
-class Inventory
+class Template
 {
-  public:
-    Inventory(const Abilities* abilityPointer);
-    ~Inventory(void);
+    public:
 
-  private:
-    const Abilities* abilities;
+    private:
 };
 
-
-#endif /* INVENTORY_H_ */
+#endif

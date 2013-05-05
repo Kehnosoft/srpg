@@ -1,14 +1,21 @@
-/*
- * Character.h
- *
- *  Created on: 13.3.2013
- *      Author: Juho L
- */
+//-------------------------------------------------------------------------------------------------
+// Project:     SRPG
+// Created:     2013-03-13
+// Author:      Juho Lepisto
+//
+// Filename:    RuleCharacter.h
+// Description: This is a base class for player characters.
+// Notes:       -
+//-------------------------------------------------------------------------------------------------
 
 #ifndef CHARACTER_H_
 #define CHARACTER_H_
 
+// 1. External header files
+
 #include "RuleCreature.h"
+
+// 2. Global enums, constants and macross
 
 enum character_profession
 {
@@ -20,11 +27,15 @@ enum character_race
   eagle = 0
 };
 
+// 3. Global data structs
+
 struct character_type
 {
   character_profession profession;
   character_race race;
 };
+
+// 4. Class definition
 
 class Character : public Creature
 {

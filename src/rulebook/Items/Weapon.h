@@ -1,18 +1,25 @@
-/*
- * Weapon.h
- *
- *  Created on: Mar 29, 2013
- *      Author: juhol
- */
+//-------------------------------------------------------------------------------------------------
+// Project:     SRPG
+// Created:     2013-03-29
+// Author:      Juho Lepisto
+//
+// Filename:    Weapon.h
+// Description: This is a class for weapon type items.
+// Notes:       -
+//-------------------------------------------------------------------------------------------------
 
 #ifndef WEAPON_H_
 #define WEAPON_H_
 
-#include "../TypeDefs.h"
+// 1. External header files
+
+#include "../../TypeDefs.h"
 #include "../Core/Dice.h"
 #include "../Creatures/Attack.h"
 #include "../Creatures/Defence.h"
 #include "Item.h"
+
+// 2. Global enums, constants and macross
 
 enum weapon_type
 {
@@ -24,6 +31,8 @@ enum ammo_type
   none = 0,
   energy_cell
 };
+
+// 3. Global data structs
 
 struct damage_dice_struct
 {
@@ -50,6 +59,8 @@ struct weapon_data_struct
     piercing_type piercing[max_attack_type_index][piercing_array_max];
     int ammoPerAttack[max_attack_type_index];
 };
+
+// 4. Class definition
 
 class Weapon : public Item
 {

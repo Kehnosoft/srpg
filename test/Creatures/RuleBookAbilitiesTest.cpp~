@@ -101,6 +101,7 @@ TEST(Abilities, AbilitiesSetScoreLimits)
   
   CHECK_NO_THROWS(testAbilities->setScore(strength, 0));
   CHECK_THROWS(ErrorInvalidData, testAbilities->setScore(strength, -1));
+  CHECK_THROWS(ErrorInvalidData, testAbilities->setScore(charisma, -1));
   
   delete testAbilities;
 }

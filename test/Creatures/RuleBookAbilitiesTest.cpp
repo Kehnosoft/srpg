@@ -5,7 +5,7 @@
  *      Author: Juho L
  */
 
-#include "../../src/rulebook/Errors.h"
+#include "../../src/Errors.h"
 #include "../../src/rulebook/Creatures/Abilities.h"
 #include "RuleBookAbilitiesTest.h"
 

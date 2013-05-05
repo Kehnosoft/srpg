@@ -1,12 +1,26 @@
-/*
- * SaveThrows.cpp
- *
- *  Created on: 20.3.2013
- *      Author: Juho L
- */
+//-------------------------------------------------------------------------------------------------
+// Project:     SRPG
+// Created:     2013-03-20
+// Author:      Juho Lepisto
+//
+// Filename:    SaveThrows.cpp
+// Description: This is a save throws class that rolls save throws according to stats and other
+//              bonuses.
+// Notes:       -
+//-------------------------------------------------------------------------------------------------
 
-#include "../Errors.h"
+// 1. Internal header files
+
+#include "../../Errors.h"
 #include "SaveThrows.h"
+
+// 2. Local enums, constants and macross
+
+
+// 3. Local global data structs and variables
+
+
+// 4. Constructor and destructor
 
 SaveThrows::SaveThrows(const Abilities* abilityPointer) : saveDie(1, 20), abilities(abilityPointer)
 {
@@ -28,6 +42,8 @@ SaveThrows::~SaveThrows()
 {
   return;
 }
+
+// 5. Public functions
 
 void SaveThrows::setBase(save_enum type, int base)
 {
@@ -152,3 +168,9 @@ int SaveThrows::getSave(save_enum type) const
   }
   return saveRoll;
 }
+
+// 6. Protected functions
+
+
+// 7. Private functions
+

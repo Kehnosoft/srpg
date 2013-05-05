@@ -1,12 +1,26 @@
-/*
- * Dice.h
- *
- *  Created on: 20.3.2013
- *      Author: Juho L
- */
+//-------------------------------------------------------------------------------------------------
+// Project:     SRPG
+// Created:     2013-03-20
+// Author:      Juho Lepisto
+//
+// Filename:    Dice.h
+// Description: This is a dice class, which generates random numbers according to given dice. Max dice is 100d100.
+// Notes:       -
+//-------------------------------------------------------------------------------------------------
 
 #ifndef DICE_H_
 #define DICE_H_
+
+// 1. External header files
+
+
+// 2. Global enums, constants and macross
+
+
+// 3. Global data structs
+
+
+// 4. Class definition
 
 class Dice
 {

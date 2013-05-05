@@ -1,12 +1,25 @@
-/*
- * Armor.cpp
- *
- *  Created on: Mar 29, 2013
- *      Author: juhol
- */
+//-------------------------------------------------------------------------------------------------
+// Project:     SRPG
+// Created:     2013-03-29
+// Author:      Juho Lepisto
+//
+// Filename:    Armor.cpp
+// Description: This is a class for armor type items.
+// Notes:       -
+//-------------------------------------------------------------------------------------------------
 
-#include "../Errors.h"
+// 1. Internal header files
+
+#include "../../Errors.h"
 #include "Armor.h"
+
+// 2. Local enums, constants and macross
+
+
+// 3. Local global data structs and variables
+
+
+// 4. Constructor and destructor
 
 Armor::Armor(item_data_struct& itemInfo, armor_data_struct& armorInfo) :
 Item(itemInfo),
@@ -40,6 +53,8 @@ Armor::~Armor(void)
 {
   return;
 }
+
+// 5. Public functions
 
 void Armor::setArmorBonusMod(int modifier)
 {
@@ -108,3 +123,9 @@ character_race Armor::getArmorRaceType(void) const
 {
   return raceType;
 }
+
+// 6. Protected functions
+
+
+// 7. Private functions
+

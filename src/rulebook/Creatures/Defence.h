@@ -1,16 +1,24 @@
-/*
- * Defence.h
- *
- *  Created on: Mar 28, 2013
- *      Author: juhol
- */
+//-------------------------------------------------------------------------------------------------
+// Project:     SRPG
+// Created:     2013-03-28
+// Author:      Juho Lepisto
+//
+// Filename:    Defence.h
+// Description: This is a defence class that calculates the different ACs and damage resistances
+//              according to stats and equipment.
+// Notes:       -
+//-------------------------------------------------------------------------------------------------
 
 #ifndef DEFENCE_H_
 #define DEFENCE_H_
 
-#include "../TypeDefs.h"
+// 1. External header files
+
+#include "../../TypeDefs.h"
 #include "Attack.h"
 #include "Abilities.h"
+
+// 2. Global enums, constants and macross
 
 enum defence_bonus_type
 {
@@ -30,6 +38,11 @@ enum AC_type
 
 static const int piercing_array_max = attunement_protection + 1;
 static const int bonus_type_max = deflection + 1;
+
+// 3. Global data structs
+
+
+// 4. Class definition
 
 class Defence
 {

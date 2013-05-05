@@ -8,7 +8,6 @@
 #ifndef RULEBOOKDICETEST_H_
 #define RULEBOOKDICETEST_H_
 
-#include "/home/juhol/git/cpputest/include/CppUTest/TestHarness.h"
-#include "/home/juhol/git/cpputest/include/CppUTest/CommandLineTestRunner.h"
+#include "../RuleBookTests.h"
 
 #endif

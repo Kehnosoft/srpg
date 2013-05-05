@@ -1,12 +1,26 @@
-/*
- * Defence.cpp
- *
- *  Created on: Mar 28, 2013
- *      Author: juhol
- */
+//-------------------------------------------------------------------------------------------------
+// Project:     SRPG
+// Created:     2013-03-28
+// Author:      Juho Lepisto
+//
+// Filename:    Defence.cpp
+// Description: This is a defence class that calculates the different ACs and damage resistances
+//              according to stats and equipment.
+// Notes:       -
+//-------------------------------------------------------------------------------------------------
 
-#include "../Errors.h"
+// 1. Internal header files
+
+#include "../../Errors.h"
 #include "Defence.h"
+
+// 2. Local enums, constants and macross
+
+
+// 3. Local global data structs and variables
+
+
+// 4. Constructor and destructor
 
 Defence::Defence(const Abilities* abilityPointer) : abilities(abilityPointer)
 {
@@ -33,6 +47,8 @@ Defence::~Defence(void)
 {
   return;
 }
+
+// 5. Public functions
 
 void Defence::addBonus(defence_bonus_type type, int bonus)
 {
@@ -114,3 +130,9 @@ void Defence::decreaseDamageResistance(damage_type type, int resistance)
   damageResistances[type] -= resistance;
   return;
 }
+
+// 6. Protected functions
+
+
+// 7. Private functions
+

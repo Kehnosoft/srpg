@@ -1,15 +1,23 @@
-/*
- * Attack.h
- *
- *  Created on: Mar 28, 2013
- *      Author: juhol
- */
+//-------------------------------------------------------------------------------------------------
+// Project:     SRPG
+// Created:     2013-03-28
+// Author:      Juho Lepisto
+//
+// Filename:    Attack.h
+// Description: This is an attack class that generates hit and damage rolls according to the
+//              creature's stats and equipment.
+// Notes:       -
+//-------------------------------------------------------------------------------------------------
 
 #ifndef ATTACK_H_
 #define ATTACK_H_
 
-#include "../TypeDefs.h"
+// 1. External header files
+
+#include "../../TypeDefs.h"
 #include "Abilities.h"
+
+// 2. Global enums, constants and macross
 
 enum damage_type
 {
@@ -67,12 +75,16 @@ enum attack_bonus_type
 static const int max_attack_bonus_index = dual_off_hand_bonus + 1;
 static const int max_attack_type_index = ranged + 1;
 
+// 3. Global data structs
+
 struct damage_struct
 {
     int ammoLeft;
     bf type;
     int amount;
 };
+
+// 4. Class definition
 
 class Attack
 {

@@ -1,20 +1,20 @@
 //-------------------------------------------------------------------------------------------------
 // Project:     SRPG
-// Created:     2013-04-28
-// Author:      Juho Lepisto
+// Created:     2013-mm-dd
+// Author:      Firstname Lastname
 //
-// Filename:    RuleBookTests.h
-// Description: General header file for RuleBook unit tests.
-// Notes:       Requires CppUTest.
+// Filename:    Template.cpp
+// Description: A short description of the class. What it does?
+// Notes:       Mention special library dependencies here (e.g. requires CppUTest or SDL)
 //-------------------------------------------------------------------------------------------------
 
 // 1. Internal header files
 
-#include "RuleBookTests.h"
+#include "Errors.h"
+#include "Template.h"
 
 // 2. Local enums, constants and macross
 
-#define RULEBOOK_TESTS  true
 
 // 3. Local global data structs and variables
 
@@ -24,12 +24,6 @@
 
 // 5. Public functions
 
-#if RULEBOOK_TESTS
-int main(int argc, char **argv)
-{
-    return CommandLineTestRunner::RunAllTests(argc, argv);
-}
-#endif
 
 // 6. Protected functions
 

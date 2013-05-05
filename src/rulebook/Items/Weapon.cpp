@@ -1,12 +1,25 @@
-/*
- * Weapon.cpp
- *
- *  Created on: Mar 29, 2013
- *      Author: juhol
- */
+//-------------------------------------------------------------------------------------------------
+// Project:     SRPG
+// Created:     2013-03-29
+// Author:      Juho Lepisto
+//
+// Filename:    Weapon.cpp
+// Description: This is a class for weapon type items.
+// Notes:       -
+//-------------------------------------------------------------------------------------------------
 
-#include "../Errors.h"
+// 1. Internal header files
+
+#include "../../Errors.h"
 #include "Weapon.h"
+
+// 2. Local enums, constants and macross
+
+
+// 3. Local global data structs and variables
+
+
+// 4. Constructor and destructor
 
 Weapon::Weapon(item_data_struct& itemInfo, weapon_data_struct& weaponInfo) :
 Item(itemInfo),
@@ -40,6 +53,8 @@ Weapon::~Weapon(void)
 {
   return;
 }
+
+// 5. Public functions
 
 void Weapon::addDamageTypeMod(attack_type attack, bf types)
 {
@@ -219,3 +234,9 @@ damage_struct Weapon::rollDamage(attack_type attack) const
 
   return damage;
 }
+
+// 6. Protected functions
+
+
+// 7. Private functions
+

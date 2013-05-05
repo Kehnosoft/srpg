@@ -1,18 +1,25 @@
-/*
- * RuleEngine.h
- *
- *  Created on: Mar 23, 2013
- *      Author: juhol
- */
+//-------------------------------------------------------------------------------------------------
+// Project:     SRPG
+// Created:     2013-03-23
+// Author:      Juho Lepisto
+//
+// Filename:    RuleEngine.h
+// Description: This is a base interface class between the rules and the game mechanic.
+// Notes:       -
+//-------------------------------------------------------------------------------------------------
 
 #ifndef RULEENGINE_H_
 #define RULEENGINE_H_
 
-#include "../TypeDefs.h"
+// 1. External header files
+
+#include "../../TypeDefs.h"
 #include <string>
 #include "../Creatures/RuleCreature.h"
 #include "../Creatures/RuleCharacter.h"
 #include "../Items/Item.h"
+
+// 2. Global enums, constants and macross
 
 enum attack_result
 {
@@ -22,6 +29,8 @@ enum attack_result
   critical_hit,
   death
 };
+
+// 3. Global data structs
 
 struct direction_struct
 {
@@ -34,6 +43,8 @@ struct direction_struct
     int W;
     int NW;
 };
+
+// 4. Class definition
 
 class RuleEngine
 {

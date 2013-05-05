@@ -1,14 +1,19 @@
-/*
- * Creature.h
- *
- *  Created on: Mar 28, 2013
- *      Author: juhol
- */
+//-------------------------------------------------------------------------------------------------
+// Project:     SRPG
+// Created:     2013-03-28
+// Author:      Juho Lepisto
+//
+// Filename:    RuleCreature.h
+// Description: This is a base class for non-playable creatures.
+// Notes:       -
+//-------------------------------------------------------------------------------------------------
 
 #ifndef CREATURE_H_
 #define CREATURE_H_
 
-#include "../TypeDefs.h"
+// 1. External header files
+
+#include "../../TypeDefs.h"
 #include "Abilities.h"
 #include "Attack.h"
 #include "Defence.h"
@@ -17,16 +22,22 @@
 #include "BaseSkills.h"
 #include "../Items/Inventory.h"
 
+// 2. Global enums, constants and macross
+
 enum creature_type
 {
   bandit = 0
 };
+
+// 3. Global data structs
 
 struct init_stats
 {
     int hitPoints;
     int abilityScores[ability_array_size];
 };
+
+// 4. Class definition
 
 class Creature
 {

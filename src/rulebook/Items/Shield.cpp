@@ -1,12 +1,25 @@
-/*
- * Shield.cpp
- *
- *  Created on: Apr 3, 2013
- *      Author: juhol
- */
+//-------------------------------------------------------------------------------------------------
+// Project:     SRPG
+// Created:     2013-04-03
+// Author:      Juho Lepisto
+//
+// Filename:    Shield.cpp
+// Description: This is a class for shield type items.
+// Notes:       -
+//-------------------------------------------------------------------------------------------------
 
-#include "../Errors.h"
+// 1. Internal header files
+
+#include "../../Errors.h"
 #include "Shield.h"
+
+// 2. Local enums, constants and macross
+
+
+// 3. Local global data structs and variables
+
+
+// 4. Constructor and destructor
 
 Shield::Shield(item_data_struct& itemInfo, shield_data_struct& shieldInfo) :
 Item(itemInfo),
@@ -24,6 +37,8 @@ Shield::~Shield(void)
 {
   return;
 }
+
+// 5. Public functions
 
 void Shield::setShieldBonusMod(int modifier)
 {
@@ -81,3 +96,9 @@ int Shield::decreaseCharge(int amount)
   }
   return amount;
 }
+
+// 6. Protected functions
+
+
+// 7. Private functions
+

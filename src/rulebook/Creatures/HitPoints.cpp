@@ -1,12 +1,26 @@
-/*
- * HitPoints.cpp
- *
- *  Created on: 20.3.2013
- *      Author: Juho L
- */
+//-------------------------------------------------------------------------------------------------
+// Project:     SRPG
+// Created:     2013-03-20
+// Author:      Juho Lepisto
+//
+// Filename:    HitPoints.cpp
+// Description: This is a hit points class that keeps track on the hitpoints of the creature,
+//              calculates healing/damage and rolls new hitpoints according to hit die and level.
+// Notes:       -
+//-------------------------------------------------------------------------------------------------
 
-#include "../Errors.h"
+// 1. Internal header files
+
+#include "../../Errors.h"
 #include "HitPoints.h"
+
+// 2. Local enums, constants and macross
+
+
+// 3. Local global data structs and variables
+
+
+// 4. Constructor and destructor
 
 HitPoints::HitPoints(int value, const Defence* defencePointer) : hitDie(1, value), defence(defencePointer)
 {
@@ -30,6 +44,8 @@ HitPoints::~HitPoints(void)
 {
   return;
 }
+
+// 5. Public functions
 
 void HitPoints::setMaxHitPoints(const int hitPoints)
 {
@@ -136,3 +152,9 @@ void HitPoints::rollHitPoints(int dice)
   }
   return;
 }
+
+// 6. Protected functions
+
+
+// 7. Private functions
+

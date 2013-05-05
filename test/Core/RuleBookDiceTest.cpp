@@ -7,7 +7,7 @@
 
 #include <iostream>
 
-#include "../../src/rulebook/Errors.h"
+#include "../../src/Errors.h"
 #include "../../src/rulebook/Core/Dice.h"
 #include "RuleBookDiceTest.h"
 

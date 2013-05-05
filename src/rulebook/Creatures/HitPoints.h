@@ -1,16 +1,30 @@
-/*
- * HitPoints.h
- *
- *  Created on: 20.3.2013
- *      Author: Juho L
- */
+//-------------------------------------------------------------------------------------------------
+// Project:     SRPG
+// Created:     2013-03-20
+// Author:      Juho Lepisto
+//
+// Filename:    HitPoints.h
+// Description: This is a hit points class that keeps track on the hitpoints of the creature,
+//              calculates healing/damage and rolls new hitpoints according to hit die and level.
+// Notes:       -
+//-------------------------------------------------------------------------------------------------
 
 #ifndef HITPOINTS_H_
 #define HITPOINTS_H_
 
+// 1. External header files
+
 #include "../Core/Dice.h"
 #include "Defence.h"
 #include "Attack.h"
+
+// 2. Global enums, constants and macross
+
+
+// 3. Global data structs
+
+
+// 4. Class definition
 
 class HitPoints
 {

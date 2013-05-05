@@ -1,16 +1,26 @@
-/*
- * Shield.h
- *
- *  Created on: Apr 3, 2013
- *      Author: juhol
- */
+//-------------------------------------------------------------------------------------------------
+// Project:     SRPG
+// Created:     2013-04-03
+// Author:      Juho Lepisto
+//
+// Filename:    Shield.h
+// Description: This is a class for shield type items.
+// Notes:       -
+//-------------------------------------------------------------------------------------------------
 
 #ifndef SHIELD_H_
 #define SHIELD_H_
 
-#include "../TypeDefs.h"
+// 1. External header files
+
+#include "../../TypeDefs.h"
 #include "Item.h"
 #include "../Creatures/Attack.h"
+
+// 2. Global enums, constants and macross
+
+
+// 3. Global data structs
 
 struct shield_data_struct
 {
@@ -18,6 +28,8 @@ struct shield_data_struct
     bf resistanceTypes;
     int charge;
 };
+
+// 4. Class definition
 
 class Shield : public Item
 {
