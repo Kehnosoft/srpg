@@ -2,10 +2,10 @@
 BUILD = bin/srpg
 CFLAGS = -c -g 
 IDIR = src 
-LIBS = -lSDLmain -lSDL -lSDL_image 
+LIBS = -lSDLmain -lSDL -lSDL_image -lstdc++ -std=c++0x 
 
-all: Armor.o Inventory.o Item.o Weapon.o Abilities.o Attack.o BaseSkills.o Character.o Creature.o Defence.o HitPoints.o SaveThrows.o Dice.o RuleEngine.o  Fps.o Surface.o Entity.o Character.o Event.o Game.o main.o
-	$(CC) main.o Game.o Event.o Entity.o Character.o Surface.o Fps.o -o $(BUILD) $(LIBS)
+all: Armor.o Inventory.o Item.o Weapon.o Abilities.o Attack.o BaseSkills.o Character.o RuleCreature.o Defence.o HitPoints.o SaveThrows.o Dice.o RuleEngine.o  Fps.o Surface.o Entity.o Character.o Event.o Game.o main.o
+	$(CC) *.o -o $(BUILD) $(LIBS)
 
 Armor.o: src/rulebook/Items/Armor.cpp src/rulebook/Items/Armor.h
 	$(CC) $(CFLAGS) src/rulebook/Items/Armor.cpp
@@ -28,11 +28,11 @@ Attack.o: src/rulebook/Creatures/Attack.cpp src/rulebook/Creatures/Attack.h
 BaseSkills.o: src/rulebook/Creatures/BaseSkills.cpp src/rulebook/Creatures/BaseSkills.h
 	$(CC) $(CFLAGS) src/rulebook/Creatures/BaseSkills.cpp
 
-Character.o: src/rulebook/Creatures/RuleCharacter.cpp src/rulebook/Creatures/RuleCharacter.h
+RuleCharacter.o: src/rulebook/Creatures/RuleCharacter.cpp src/rulebook/Creatures/RuleCharacter.h
 	$(CC) $(CFLAGS) src/rulebook/Creatures/RuleCharacter.cpp
 
-Creature.o: src/rulebook/Creatures/Creature.cpp src/rulebook/Creatures/Creature.h
-	$(CC) $(CFLAGS) src/rulebook/Creatures/Creature.cpp
+RuleCreature.o: src/rulebook/Creatures/RuleCreature.cpp src/rulebook/Creatures/RuleCreature.h
+	$(CC) $(CFLAGS) src/rulebook/Creatures/RuleCreature.cpp
 
 Defence.o: src/rulebook/Creatures/Defence.cpp src/rulebook/Creatures/Defence.h
 	$(CC) $(CFLAGS) src/rulebook/Creatures/Defence.cpp
@@ -71,4 +71,4 @@ main.o: src/main.cpp
 	$(CC) $(CFLAGS) src/main.cpp
 
 clean:
-	rm *.o
+	del *.o
